@@ -9,32 +9,78 @@
   overflow: hidden;
 }
 
-/* Blue glow — left */
-.hero::before {
-  content: '';
+/* Background layer */
+.hero-bg {
   position: absolute;
-  top: 40%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(88, 166, 255, 0.12) 0%, transparent 65%);
+  inset: 0;
   pointer-events: none;
+  z-index: 0;
 }
 
-/* Amber glow — right */
-.hero::after {
-  content: '';
+/* Dot grid overlay */
+.hero-grid {
   position: absolute;
-  top: 55%;
-  left: 70%;
-  transform: translate(-50%, -50%);
+  inset: 0;
+  background-image: radial-gradient(rgba(230, 237, 243, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Animated orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.20;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.orb-blue {
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(240, 136, 62, 0.09) 0%, transparent 65%);
-  pointer-events: none;
+  top: -10%;
+  left: -5%;
+  background: radial-gradient(circle, #58a6ff, transparent 70%);
+  animation: drift-1 14s ease-in-out infinite alternate;
 }
 
+.orb-amber {
+  width: 500px;
+  height: 500px;
+  bottom: -10%;
+  right: -5%;
+  background: radial-gradient(circle, #f0883e, transparent 70%);
+  animation: drift-2 18s ease-in-out infinite alternate;
+}
+
+.orb-purple {
+  width: 400px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, #bc8cff, transparent 70%);
+  opacity: 0.08;
+  animation: drift-3 22s ease-in-out infinite alternate;
+}
+
+@keyframes drift-1 {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(60px, 40px); }
+}
+
+@keyframes drift-2 {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(-50px, -60px); }
+}
+
+@keyframes drift-3 {
+  from { transform: translate(-50%, -50%) scale(1); }
+  to   { transform: translate(-50%, -50%) scale(1.15); }
+}
+
+/* Content */
 .hero-content {
   max-width: 680px;
   display: flex;

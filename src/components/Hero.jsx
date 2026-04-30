@@ -3,6 +3,13 @@ import './Hero.css'
 function Hero() {
   return (
     <section id="hero" className="hero">
+      <div className="hero-bg" aria-hidden="true">
+        <div className="orb orb-blue" />
+        <div className="orb orb-amber" />
+        <div className="orb orb-purple" />
+        <div className="hero-grid" />
+      </div>
+
       <div className="hero-content">
         <p className="hero-eyebrow">Hi, I'm</p>
         <h1 className="hero-name">Carlos Baston</h1>

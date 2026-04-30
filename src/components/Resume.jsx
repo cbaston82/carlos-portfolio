@@ -1,5 +1,9 @@
 import './Resume.css'
 
+function handlePrint() {
+  window.print()
+}
+
 const summary = `Full stack software engineer with 10+ years of experience building web applications, leading engineering teams, and delivering production software across multiple industries. Background spans frontend and backend development, QA engineering, software architecture, and 8+ years of independent freelance work. Also an active CDL Class A over-the-road truck driver — a combination that brings discipline, reliability, and real-world problem solving to everything I build.`
 
 const softwareRoles = [
@@ -93,9 +97,27 @@ function Resume() {
   return (
     <section id="resume" className="resume">
       <div className="resume-inner">
-        <h2 className="section-heading">Resume</h2>
+        <div className="resume-top-bar">
+          <h2 className="section-heading" style={{marginBottom: 0}}>Resume</h2>
+          <button className="resume-download-btn" onClick={handlePrint}>
+            ↓ Download PDF
+          </button>
+        </div>
 
         <div className="resume-doc">
+
+          <div className="resume-header">
+            <p className="resume-header-name">Carlos Baston</p>
+            <div className="resume-header-meta">
+              <span>Las Vegas, NV</span>
+              <span>·</span>
+              <a href="mailto:carlosbaston82@gmail.com">carlosbaston82@gmail.com</a>
+              <span>·</span>
+              <a href="https://github.com/cbaston82" target="_blank" rel="noreferrer">github.com/cbaston82</a>
+              <span>·</span>
+              <a href="https://www.linkedin.com/in/carlosbaston" target="_blank" rel="noreferrer">linkedin.com/in/carlosbaston</a>
+            </div>
+          </div>
 
           <div className="resume-summary">
             <p>{summary}</p>
