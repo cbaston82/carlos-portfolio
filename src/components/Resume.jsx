@@ -111,11 +111,11 @@ function Resume() {
             <div className="resume-header-meta">
               <span>Las Vegas, NV</span>
               <span>·</span>
-              <a href="mailto:carlosbaston82@gmail.com">carlosbaston82@gmail.com</a>
+              <a href="mailto:cbaston.dev@gmail.com">cbaston.dev@gmail.com</a>
               <span>·</span>
               <a href="https://github.com/cbaston82" target="_blank" rel="noreferrer">github.com/cbaston82</a>
               <span>·</span>
-              <a href="https://www.linkedin.com/in/carlosbaston" target="_blank" rel="noreferrer">linkedin.com/in/carlosbaston</a>
+              <a href="https://www.linkedin.com/in/carlos-baston-04341484/" target="_blank" rel="noreferrer">linkedin.com/in/carlos-baston</a>
             </div>
           </div>
 
