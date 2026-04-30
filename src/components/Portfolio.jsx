@@ -117,7 +117,7 @@ function Portfolio() {
 
         <div className="portfolio-grid">
           {projects.map((project) => (
-            <div key={project.name} className="project-card">
+            <div key={project.name} className="project-card" data-type={project.type}>
               <div className="project-header">
                 <span className="project-type">{project.type}</span>
                 <div className="project-links">

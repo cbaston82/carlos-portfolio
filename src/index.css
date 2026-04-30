@@ -9,8 +9,11 @@
   --surface:  #161b22;
   --card:     #21262d;
   --border:   #30363d;
-  --accent:   #58a6ff;
-  --accent-h: #79b8ff;
+  --accent:      #58a6ff;
+  --accent-h:    #79b8ff;
+  --accent-warm: #f0883e;
+  --accent-warm-h: #ffab70;
+  --accent-purple: #bc8cff;
   --text:     #e6edf3;
   --muted:    #8b949e;
 }

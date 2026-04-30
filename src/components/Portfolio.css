@@ -20,17 +20,34 @@
 .project-card {
   background: var(--surface);
   border: 1px solid var(--border);
+  border-top: 3px solid var(--border);
   border-radius: 8px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, border-top-color 0.2s;
+}
+
+.project-card[data-type="Personal Project"] {
+  border-top-color: var(--accent);
+}
+
+.project-card[data-type="Professional"] {
+  border-top-color: var(--accent-purple);
+}
+
+.project-card[data-type="Freelance"] {
+  border-top-color: var(--accent-warm);
 }
 
 .project-card:hover {
-  border-color: var(--accent);
+  border-color: var(--border);
 }
+
+.project-card[data-type="Personal Project"]:hover  { border-top-color: var(--accent); }
+.project-card[data-type="Professional"]:hover      { border-top-color: var(--accent-purple); }
+.project-card[data-type="Freelance"]:hover         { border-top-color: var(--accent-warm); }
 
 .project-header {
   display: flex;
@@ -40,11 +57,14 @@
 
 .project-type {
   font-size: 0.75rem;
-  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 600;
 }
+
+.project-card[data-type="Personal Project"] .project-type { color: var(--accent); }
+.project-card[data-type="Professional"]     .project-type { color: var(--accent-purple); }
+.project-card[data-type="Freelance"]        .project-type { color: var(--accent-warm); }
 
 .project-links {
   display: flex;

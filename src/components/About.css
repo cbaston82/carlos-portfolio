@@ -1,5 +1,5 @@
 .about {
-  padding: 6rem 1.5rem;
+  padding: 6rem 1.5rem 4rem;
 }
 
 .about-inner {
@@ -27,7 +27,7 @@
   display: block;
 }
 
-/* Text */
+/* Section heading */
 .section-heading {
   font-size: 2rem;
   font-weight: 700;
@@ -48,6 +48,44 @@
   border-radius: 2px;
 }
 
+/* Identity pills */
+.about-identity {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.identity-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.identity-icon {
+  font-size: 0.9rem;
+}
+
+.identity-divider {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.identity-pill.driver {
+  border-color: var(--accent-warm);
+  color: var(--accent-warm);
+}
+
+/* Bio text */
 .about-text p {
   color: var(--muted);
   line-height: 1.8;
@@ -83,6 +121,54 @@
   letter-spacing: 0.08em;
 }
 
+/* States section */
+.about-states-section {
+  margin-top: 3rem;
+  border-top: 1px solid var(--border);
+  padding-top: 2.5rem;
+}
+
+.about-states-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.states-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.states-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.state-chip {
+  background: var(--surface);
+  border: 1px solid var(--accent-warm);
+  color: var(--accent-warm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.state-chip:hover {
+  background: var(--accent-warm);
+  color: #0d1117;
+}
+
+.stat.warm .stat-value {
+  color: var(--accent-warm);
+}
+
 /* Responsive */
 @media (max-width: 680px) {
   .about-inner {
@@ -95,6 +181,10 @@
     height: 160px;
   }
 
+  .about-photo {
+    justify-content: center;
+  }
+
   .section-heading::after {
     left: 50%;
     transform: translateX(-50%);
@@ -102,6 +192,10 @@
 
   .about-text {
     text-align: center;
+  }
+
+  .about-identity {
+    justify-content: center;
   }
 
   .about-stats {
