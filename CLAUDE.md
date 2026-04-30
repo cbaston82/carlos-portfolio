@@ -42,10 +42,10 @@ A personal portfolio website for Carlos Baston. Single page, smooth scroll. Dark
 - No third-party UI libraries unless we agree on one first
 
 ## Status
-- [ ] Scaffold done (Vite + React)
-- [ ] Nav
-- [ ] Hero
-- [ ] About
+- [x] Scaffold done (Vite + React)
+- [x] Nav
+- [x] Hero
+- [x] About
 - [ ] Skills
 - [ ] Portfolio
 - [ ] Resume
