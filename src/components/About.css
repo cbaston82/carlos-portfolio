@@ -142,6 +142,31 @@
   margin-bottom: 1rem;
 }
 
+.states-container {
+  position: relative;
+  padding-top: 2rem;
+}
+
+.states-truck {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.1rem;
+  pointer-events: none;
+  will-change: transform;
+  line-height: 1;
+  margin-left: -10px;
+}
+
+.truck-emoji {
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.truck-emoji.east {
+  transform: scaleX(-1);
+}
+
 .states-grid {
   display: flex;
   flex-wrap: wrap;
@@ -157,7 +182,13 @@
   padding: 0.3rem 0.6rem;
   border-radius: 4px;
   letter-spacing: 0.05em;
-  transition: background 0.2s, color 0.2s;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s;
+}
+
+.state-chip.active {
+  background: var(--accent-warm);
+  color: #0d1117;
+  box-shadow: 0 0 10px rgba(240, 136, 62, 0.5);
 }
 
 .state-chip:hover {
