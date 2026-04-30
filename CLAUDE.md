@@ -50,5 +50,5 @@ A personal portfolio website for Carlos Baston. Single page, smooth scroll. Dark
 - [x] Portfolio
 - [x] Resume
 - [x] Contact
-- [ ] Footer
+- [x] Footer
 - [ ] Deploy

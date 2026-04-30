@@ -107,7 +107,7 @@ function Resume() {
         <div className="resume-doc">
 
           <div className="resume-header">
-            <p className="resume-header-name">Carlos Baston</p>
+            <h3 className="resume-header-name">Carlos Baston</h3>
             <div className="resume-header-meta">
               <span>Las Vegas, NV</span>
               <span>·</span>
