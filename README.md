@@ -1,16 +1,43 @@
-# React + Vite
+# Carlos Baston — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website for Carlos Baston, Full Stack Engineer and CDL Class A driver based in Las Vegas, NV.
 
-Currently, two official plugins are available:
+## Live Site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[carlosbaston.dev](https://carlosbaston.dev) *(coming soon)*
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Single-page portfolio built from scratch with React and Vite. Dark GitHub-style theme with blue and amber accents. No CSS frameworks, no UI libraries — just clean component-based architecture with plain CSS.
 
-## Expanding the ESLint configuration
+## Sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Hero** — Animated gradient orbs, name, title, and CTAs
+- **About** — Bio, dual identity (Engineer + Driver), animated truck across all 48 contiguous states
+- **Skills** — Tech stack grouped by category including AI & Integrations
+- **Portfolio** — Projects with live previews, GitHub links, and an interactive Chuck Norris terminal demo
+- **Resume** — Inline resume with PDF download via browser print
+- **Contact** — Netlify Forms + LinkedIn and email links
+- **Footer** — Logo, copyright, social links
+
+## Tech Stack
+
+- [React](https://react.dev) — UI
+- [Vite](https://vitejs.dev) — Build tool
+- Plain CSS — No framework
+- [Netlify](https://netlify.com) — Hosting + Forms
+
+## Running Locally
+
+```bash
+git clone https://github.com/cbaston82/carlos-portfolio.git
+cd carlos-portfolio
+npm install
+npm run dev
+```
+
+## Contact
+
+- Email: [cbaston.dev@gmail.com](mailto:cbaston.dev@gmail.com)
+- LinkedIn: [linkedin.com/in/carlos-baston-04341484](https://www.linkedin.com/in/carlos-baston-04341484/)
+- GitHub: [github.com/cbaston82](https://github.com/cbaston82)

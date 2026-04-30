@@ -1,5 +1,12 @@
+import { useState, useEffect } from 'react'
 import './Portfolio.css'
 import JokesTerminal from './JokesTerminal'
+
+import rackemmImg          from '../assets/rackemm.png'
+import rtnImg              from '../assets/rtn-tv.png'
+import centralRecoveryImg  from '../assets/central-recovery-press.png'
+import mobBilliards        from '../assets/mob-billiards.png'
+import dotsImg             from '../assets/dots-southern-kitchen.png'
 
 const projects = [
   {
@@ -10,6 +17,7 @@ const projects = [
     live: 'https://rackemm.netlify.app',
     github: 'https://github.com/cbaston82/rackemm-ui',
     type: 'Personal Project',
+    preview: rackemmImg,
   },
   {
     name: 'TandemSet',
@@ -19,6 +27,7 @@ const projects = [
     live: null,
     github: 'https://github.com/cbaston82/TandemSet',
     type: 'Personal Project',
+    preview: null,
   },
   {
     name: 'RTN.TV — Streaming Platform',
@@ -28,6 +37,7 @@ const projects = [
     live: 'https://beta.rtn.tv',
     github: null,
     type: 'Professional',
+    preview: rtnImg,
   },
   {
     name: 'CCSD Surveillance Platform',
@@ -37,6 +47,7 @@ const projects = [
     live: null,
     github: null,
     type: 'Professional',
+    preview: null,
   },
   {
     name: 'Allegiant Air — Travel Systems',
@@ -46,6 +57,7 @@ const projects = [
     live: null,
     github: null,
     type: 'Professional',
+    preview: null,
   },
   {
     name: 'Central Recovery Press',
@@ -55,6 +67,7 @@ const projects = [
     live: 'https://centralrecoverypress.com',
     github: null,
     type: 'Freelance',
+    preview: centralRecoveryImg,
   },
   {
     name: 'Mob Billiards',
@@ -64,6 +77,7 @@ const projects = [
     live: 'https://mobbilliards.com',
     github: null,
     type: 'Freelance',
+    preview: mobBilliards,
   },
   {
     name: "Dot's Southern Kitchen",
@@ -73,6 +87,7 @@ const projects = [
     live: 'http://dotssouthernkitchen2.com',
     github: null,
     type: 'Freelance',
+    preview: dotsImg,
   },
   {
     name: 'Chuck Norris Terminal Jokes',
@@ -83,6 +98,7 @@ const projects = [
     github: 'https://github.com/cbaston82/chuck_norris_terminal_jokes',
     type: 'Personal Project',
     featured: true,
+    preview: null,
   },
   {
     name: 'Freelance Web Development',
@@ -92,10 +108,45 @@ const projects = [
     live: null,
     github: null,
     type: 'Freelance',
+    preview: null,
   },
 ]
 
+function PreviewModal({ project, onClose }) {
+  useEffect(() => {
+    function onKey(e) { if (e.key === 'Escape') onClose() }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [onClose])
+
+  return (
+    <div className="modal-backdrop" onClick={onClose}>
+      <div className="modal" onClick={e => e.stopPropagation()}>
+        <div className="modal-bar">
+          <div className="modal-dots">
+            <span className="modal-dot" onClick={onClose} />
+            <span className="modal-dot" />
+            <span className="modal-dot" />
+          </div>
+          <span className="modal-url">{project.live}</span>
+          <button className="modal-close" onClick={onClose}>✕</button>
+        </div>
+        <div className="modal-body">
+          <img src={project.preview} alt={`${project.name} preview`} className="modal-screenshot" />
+        </div>
+        <div className="modal-footer">
+          <a href={project.live} target="_blank" rel="noreferrer" className="btn btn-primary">
+            Visit Site
+          </a>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function Portfolio() {
+  const [activePreview, setActivePreview] = useState(null)
+
   return (
     <section id="portfolio" className="portfolio">
       <div className="portfolio-inner">
@@ -122,14 +173,10 @@ function Portfolio() {
                 <span className="project-type">{project.type}</span>
                 <div className="project-links">
                   {project.github && (
-                    <a href={project.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-                      GitHub
-                    </a>
+                    <a href={project.github} target="_blank" rel="noreferrer">GitHub</a>
                   )}
                   {project.live && (
-                    <a href={project.live} target="_blank" rel="noreferrer" aria-label="Live site">
-                      Live
-                    </a>
+                    <a href={project.live} target="_blank" rel="noreferrer">Live</a>
                   )}
                 </div>
               </div>
@@ -137,15 +184,26 @@ function Portfolio() {
               <h3 className="project-name">{project.name}</h3>
               <p className="project-description">{project.description}</p>
 
-              <ul className="project-tags">
-                {project.tags.map((tag) => (
-                  <li key={tag} className="project-tag">{tag}</li>
-                ))}
-              </ul>
+              <div className="project-footer">
+                <ul className="project-tags">
+                  {project.tags.map((tag) => (
+                    <li key={tag} className="project-tag">{tag}</li>
+                  ))}
+                </ul>
+                {project.preview && (
+                  <button className="preview-btn" onClick={() => setActivePreview(project)}>
+                    Preview
+                  </button>
+                )}
+              </div>
             </div>
           ))}
         </div>
       </div>
+
+      {activePreview && (
+        <PreviewModal project={activePreview} onClose={() => setActivePreview(null)} />
+      )}
     </section>
   )
 }
