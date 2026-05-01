@@ -34,6 +34,15 @@ A personal portfolio website for Carlos Baston. Single page, smooth scroll. Dark
 - No inline styles
 - Props over hardcoded content where it makes sense
 
+## Portfolio — Project Platform Rules
+- Each project object may include a `platform` field: `'web'`, `'mobile'`, or omit if not applicable
+- Mobile projects support these store link fields:
+  - `appStore` — App Store URL (string, if live on iOS)
+  - `googlePlay` — Google Play URL (string, if public on Android)
+  - `googlePlayTesting: true` — when the Android app is in restricted beta; renders a "Request Android Beta" button (mailto) instead of a store link so visitors can ask to be added as a tester
+- Project cards display a "Mobile" badge in the header for platform-typed projects
+- Store/tester links appear between the description and the tag footer
+
 ## Coding Rules
 - JavaScript only (no TypeScript)
 - Functional components with hooks only (no class components)

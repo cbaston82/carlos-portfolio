@@ -76,7 +76,7 @@ function Contact() {
           {submitted ? (
             <div className="contact-success">
               <p className="contact-success-title">Message sent!</p>
-              <p className="contact-success-sub">Thanks for reaching out — I'll get back to you soon.</p>
+              <p className="contact-success-sub">Thanks for reaching out — I'll get back to you soon. 🤙</p>
             </div>
           ) : (
             <form

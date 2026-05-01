@@ -31,7 +31,7 @@ function Skills() {
   return (
     <section id="skills" className="skills">
       <div className="skills-inner">
-        <h2 className="section-heading">Tech Stack</h2>
+        <h2 className="section-heading">Tech Stack 🛠️</h2>
 
         <div className="skills-grid">
           {skillGroups.map((group) => (

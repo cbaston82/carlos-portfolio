@@ -15,7 +15,7 @@ function Hero() {
         <h1 className="hero-name">Carlos Baston</h1>
         <p className="hero-title">Full Stack Engineer</p>
         <p className="hero-tagline">
-          I build clean, purposeful web applications — from backend APIs to polished UIs.
+          I build clean, purposeful web applications — from backend APIs to polished UIs. ⚡
         </p>
         <div className="hero-ctas">
           <a href="#portfolio" className="btn btn-primary">View My Work</a>

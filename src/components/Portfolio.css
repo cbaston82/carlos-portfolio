@@ -55,6 +55,56 @@
   align-items: center;
 }
 
+
+.store-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: opacity 0.2s, background 0.2s;
+  border: 1px solid transparent;
+}
+
+.store-btn--ios {
+  background: #1c1c1e;
+  color: #f5f5f7;
+  border-color: #3a3a3c;
+}
+
+.store-btn--ios:hover {
+  opacity: 0.85;
+}
+
+.store-btn--android {
+  background: #1a2e1a;
+  color: #4caf50;
+  border-color: #2e5c2e;
+}
+
+.store-btn--android:hover {
+  opacity: 0.85;
+}
+
+.store-btn--tester {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.store-btn--tester:hover {
+  background: rgba(88, 166, 255, 0.1);
+}
+
 .project-type {
   font-size: 0.75rem;
   text-transform: uppercase;
