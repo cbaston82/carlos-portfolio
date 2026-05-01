@@ -35,7 +35,7 @@ const projects = [
     description:
       'A full stack billiards tournament platform where players can discover public events and organizers can create and manage their own. Features JWT authentication, Stripe subscription billing, image hosting via Cloudinary, and transactional email through SendGrid.',
     tags: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Cloudinary', 'SendGrid'],
-    live: 'https://rackemm.netlify.app',
+    live: 'https://rackemm.com',
     github: 'https://github.com/cbaston82/rackemm-ui',
     type: 'Personal Project',
     preview: rackemmImg,
